@@ -53,14 +53,10 @@ class OTMClient {
 				completion(false, error)
 				return
 			}
+			let newData = data.subdata(in: 5..<data.count) /* subset response data! */
+			print(String(data: newData, encoding: .utf8)!)
 			
-			do {
-				let responseObject = try JSONDecoder().decode(LoginResponse.self, from: data)
-				print(responseObject)
-				Auth.sessionId = responseObject.session.id
-			}catch {
-				completion(false, error)
-			}
+			completion(true, nil)
 		}
 		task.resume()
 	}
