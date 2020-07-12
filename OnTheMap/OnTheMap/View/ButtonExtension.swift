@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 extension UIButton {
 	@IBInspectable
 	var cornerRadious: CGFloat {

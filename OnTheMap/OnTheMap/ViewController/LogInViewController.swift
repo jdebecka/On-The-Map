@@ -10,14 +10,14 @@ import UIKit
 let toolBarId = "toolBarId"
 class LogInViewController: UIViewController {
 	
+	
 	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var emailTextField: UITextField!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
 	}
-	
+
 	@IBAction func signUpButtonTapped(_ sender: Any) {
 	}
 	@IBAction func loginTapped(_ sender: Any) {

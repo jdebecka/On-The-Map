@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 // MARK: - PostLogin
 struct PostLogin: Codable {
     let udacity: Udacity
