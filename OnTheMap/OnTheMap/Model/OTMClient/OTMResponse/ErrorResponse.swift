@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - ErrorResponse
-struct ErrorResponse: Codable {
+struct ErrorResponse: Codable, Error {
     let status: Int
     let error: String
 }

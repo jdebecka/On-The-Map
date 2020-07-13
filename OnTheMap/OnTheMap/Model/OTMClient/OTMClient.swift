@@ -69,8 +69,8 @@ class OTMClient {
 			}catch {
 				do {
 					let errorResponse = try decoder.decode(ErrorResponse.self, from: newData)
-					print(errorResponse.error)
-					completion(false, error)
+				
+					completion(false, errorResponse)
 				}catch {
 					print(error)
 				}

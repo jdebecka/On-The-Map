@@ -79,8 +79,10 @@ extension MapViewController: MKMapViewDelegate {
 	    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
             if let toOpen = view.annotation?.subtitle! {
-				let svc = SFSafariViewController(url: URL(string: toOpen)!)
-				present(svc, animated: true, completion: nil)
+				if let url = URL(string: toOpen) {
+					let svc = SFSafariViewController(url: url)
+					present(svc, animated: true, completion: nil)
+				}
             }
         }
     }
